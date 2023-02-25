@@ -8,7 +8,7 @@ const person = {
           fullName: ["John", "Doe"]
         },
         age: 32,
-        isMale: false,
+        isMale: true,
         address: {
           street: "13/A St Joseph",
           house: 10,
@@ -20,7 +20,7 @@ const person = {
           fullName: ["Humayoun", "Kabir"]
         },
         age: 33,
-        isMale: false,
+        isMale: true,
         address: {
           street: "13/A St Lucia",
           house: 11,

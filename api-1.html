@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-1</title>
+    <!-- Tailwindcss link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main>
+        <h1 id="found-person-text" class="text-center text-xl md:text-2xl font-bold mt-10">Found persons details</h1>
+        <div id="container" class="max-w-3xl min-h-[230px] shadow-xl mx-auto rounded-md mt-5 border">
+            <h1 id="no-data-msg" class="text-center mt-20"><i>No found data. <br> Please click find button!</i></h1>
+        </div>
+        <div class="max-w-xl mx-auto mt-8 flex justify-center">
+            <button onclick="displayPersonDetails()" class="w-16 h-8 bg-[#6F00ED] rounded font-bold text-white hover:bg-[#DB0B5F]">Find</button>
+        </div>
+    </main>
+    <!-- local js file -->
+    <script src="api-data/api-1-data.js"></script>
+    <script src="js/api-1.js"></script>
+</body>
+</html>
