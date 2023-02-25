@@ -4,3 +4,6 @@ const api1 = () => {
 const api2 = () => {
     window.location.href = "api-2.html";
 }
+const api3 = () => {
+    window.location.href = "api-3.html";
+}

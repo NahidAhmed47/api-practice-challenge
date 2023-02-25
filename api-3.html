@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API-3</title>
+    <!-- Tailwindcss link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main>
+      <div class="border shadow-xl max-w-6xl mx-auto mt-10 pb-6 min-h-[500px] relative">
+        <div class="max-w-6xl h-12 flex bg-gray-100 mx-auto px-3 items-center justify-between">
+          <h1 class=" text-xl font-bold">
+            Found <span id="found-country-text"></span> Country details
+          </h1>
+          <div class="flex h-[70%] rounded">
+            <select class="pb-1 pl-2 rounded-l" onchange="findSelectedValue()" id="select-field">
+                <option class="font-semibold" value="" disabled selected>Select Category</option>
+                <optgroup label="Region">
+                  <option class="font-semibold">America</option>
+                  <option class="font-semibold">Africa</option>
+                  <option class="font-semibold">Asia</option>
+                  <option class="font-semibold">Europe</option>
+                  <option class="font-semibold">Oceania</option>
+                </optgroup>
+                <optgroup label="Capital City">
+                  <option class="font-semibold">Dhaka</option>
+                  <option class="font-semibold">Moscow</option>
+                  <option class="font-semibold">Kabul</option>
+                  <option class="font-semibold">Buenos Aires</option>
+                  <option class="font-semibold">Canberra</option>
+                  <option class="font-semibold">Vienna</option>
+                  <option class="font-semibold">Manama</option>
+                  <option class="font-semibold">Brussels</option>
+                  <option class="font-semibold">Brasilia</option>
+                  <option class="font-semibold">Sofia</option>
+                  <option class="font-semibold">Beijing</option>
+                  <option class="font-semibold">London</option>
+                </optgroup>
+                <optgroup label="Language">
+                  <option class="font-semibold">Bangla</option>
+                  <option class="font-semibold">English</option>
+                  <option class="font-semibold">Spanish</option>
+                  <option class="font-semibold">Arabic</option>
+                </optgroup>
+              </select>
+              <div class="w-14 h-full bg-gray-200 flex items-center justify-center "><h1 class="text-base font-bold">Filter</h1></div>
+          </div>
+        </div>
+        <div
+          id="body-container"
+          class="max-w-6xl h-full mx-auto rounded-b-md"
+        >
+          <h1 id="no-data-msg" class="text-center mt-20">
+            <i
+              >No found data. <br />
+              Please click find button!</i
+            >
+          </h1>
+        </div>
+        <div class="max-w-xl mx-auto mt-12 flex justify-center">
+          <button
+            onclick="loadCountryData()"
+            class="w-16 h-8 bg-[#6F00ED] rounded font-bold text-white hover:bg-[#DB0B5F]"
+          >
+            Find
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-- local js file -->
+    <script src="js/api-3.js"></script>
+  </body>
+</html>
