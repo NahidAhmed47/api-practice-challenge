@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-6</title>
+    <!-- Tailwindcss link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body   class="bg-slate-800 h-[100vh] pt-16">
+    <main>
+        <section class="bg-slate-900 max-w-xl mx-auto min-h-[400px] rounded-md shadow-xl p-6">
+            <div class="flex justify-between items-center">
+                <input id="input-field" class="w-[80%] h-12 border-b bg-slate-800 border-sky-400 rounded px-3 text-white font-semibold outline-none " type="text" placeholder="Search word here..." onchange="inputValue()">
+                <img onclick="inputValue()" class="w-10 h-10 mr-6" src="icons/magnifying-glass-solid.svg" alt="">
+            </div>
+            <div class="mt-5">
+                <div class="flex justify-between">
+                    <h1 id="show-keyword" class="text-xl text-white font-bold">Your search word</h1>
+                    <audio controls class="w-36 h-8">
+                        <source id="audio"  type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="flex justify-between gap-2 items-center mt-2">
+                    <p class="text-white font-semibold " id="word-type">...</p> <hr class="border border-sky-400 w-full">
+                </div>
+                <h1 class="text-sky-400 font-semibold mt-5">Meaning:</h1>
+                <ul class="text-white list-disc ml-10 mt-1 text-sm">
+                    <li id="li-1"><i>No meaning here.</i></li>
+                    <li id="li-2"><i>No meaning here.</i></li>
+                    <li id="li-3"><i>No meaning here.</i></li>
+                </ul>
+                <h1 class="text-sky-400 font-semibold mt-5">Synonyms:  <span class="text-white" id="synonyms"></span></h1>
+                <hr class="border border-sky-400 w-full mt-2">
+                <h1 class="text-sky-400 font-semibold mt-3">Source:  <span id="source" class="text-white"></span></h1>
+            </div>
+        </section>
+    </main>
+    <!-- local js file -->
+    <script src="js/api-6.js"></script>
+</body>
+</html>
