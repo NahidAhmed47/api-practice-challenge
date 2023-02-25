@@ -43,7 +43,12 @@ const findSelectedValue = () => {
         loadDataByRegion(finalValue);
     }
     else{
-        loadDataByCity(finalValue);
+        if(finalValue === 'english' || finalValue === 'french' || finalValue === 'arabic' || finalValue === 'spanish' || finalValue === 'german' || finalValue === 'bengali'){
+            loadDataByLang(finalValue);
+        }
+        else{
+            loadDataByCity(finalValue);
+        }
     }
 }
 // Load data by region
@@ -84,6 +89,36 @@ const loadDataByCity = (city) => {
     .then(data => displayRegionData(data))
 }
 const displayCityCountry = (country) => {
+    container.innerText = '';
+    container.classList.add('grid', 'gird-cols-1', 'md:grid-cols-4', 'p-8', 'gap-4');
+    setTotalCountry(country.length)
+    country.forEach((country) => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <div class="card card-compact w-full bg-base-100 shadow h-[400px]">
+        <figure><img class="max-h-[100px]" src="${country.flags.png}"/></figure>
+        <div class="card-body p-6 mt-2">
+          <h2 class="card-title font-bold"><span>${country.name.common}</span></h2>
+          <p class="font-semibold text-sm"><span class="font-bold">Official:</span> <span>${country.name.official}</span></p>
+          <p class="font-semibold text-sm"><span class="font-bold">Capital:</span> <span>${country.capital[0]}</span></p>
+          <p class="font-semibold text-sm"><span class="font-bold">Population:</span> <span>${country.population}</span></p>
+          <p class="font-semibold text-sm"><span class="font-bold">Region:</span> <span>${country.region}</span></p>
+          <p class="font-semibold text-sm"><span class="font-bold">Start of Week:</span> <span>${country.startOfWeek}</span></p>
+          <p class="font-semibold"><span class="font-bold">Time Zone:</span> <span>${country.timezones[0]}</span></p>
+        </div>
+      </div>
+        `;
+        container.appendChild(div);
+    })
+}
+// Load data by Languages
+const loadDataByLang = (city) => {
+    const url = `https://restcountries.com/v3.1/lang/${city}`;
+    fetch(url)
+    .then(res => res.json())
+    .then(data => displayRegionData(data))
+}
+const displayLangCountry = (country) => {
     container.innerText = '';
     container.classList.add('grid', 'gird-cols-1', 'md:grid-cols-4', 'p-8', 'gap-4');
     setTotalCountry(country.length)
