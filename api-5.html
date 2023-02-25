@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-5</title>
+    <!-- Tailwindcss link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-800">
+    <main>
+        <div class="max-w-md min-h-[260px] mx-auto mt-20 rounded-md shadow-2xl bg-slate-900 p-8 relative text-center flex flex-col items-center">
+            <h1 class="text-center text-sky-500 font-bold text-xs">A D V I C E <span class="ml-2">#<span id="id-field">112</span></span></h1>
+            <p class="text-xl font-semibold text-slate-200 mt-3">"<span id="advice-field">If you are feeling down, try holding a pencil between your top lip and your nose for five minutes.</span>"</p> 
+            <hr class="border-sky-500 mt-10 w-full">
+            <div onclick="randomAdvice()" class="w-10 h-10 bg-sky-900 shadow-3xl absolute bottom-[-17px] rounded-full flex justify-center items-center hover:bg-slate-800 hover:scale-[0.9] duration-200">
+                <img class="w-7 h-7" src="icons/rotate-left-solid.svg" alt="">
+            </div>
+        </div>
+    </main>
+    <!-- local js file -->
+    <script src="js/api-5.js"></script>
+</body>
+</html>

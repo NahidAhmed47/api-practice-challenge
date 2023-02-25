@@ -10,3 +10,6 @@ const api3 = () => {
 const api4 = () => {
     window.location.href = "api-4.html";
 }
+const api5 = () => {
+    window.location.href = "api-5.html";
+}
