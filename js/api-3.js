@@ -13,9 +13,8 @@ const loadCountryData = () => {
 const displayData = (countries) => {
     container.innerText = '';
     container.classList.add('grid', 'gird-cols-1', 'md:grid-cols-4', 'p-8', 'gap-4');
-    const countrySlice = countries.slice(0, 50);
-    setTotalCountry(countrySlice.length)
-    countrySlice.forEach((country) => {
+    setTotalCountry(countries.length)
+    countries.forEach((country) => {
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="card card-compact w-full bg-base-100 shadow h-[400px]">
