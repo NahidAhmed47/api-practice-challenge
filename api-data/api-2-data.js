@@ -29,6 +29,6 @@ const data = [
       price: "434",
       description:
         "Vehicle Type: Crossover, Doors: 5, Seats: 7, Luggage: 5Suitcases / 5Bags, Transmission: Automatic",
-      
+      imageURL: "https://www.gmfleet.com/content/dam/fleet/na/us/english/vdc-collections/2022/chevy/crossovers-suvs/trax/trax/01-images/2021-gmf-trax22-jelly.png?imwidth=960",
     },
   ];
